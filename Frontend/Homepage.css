@@ -1,0 +1,33 @@
+header{
+    font-size: 35px;
+    font-weight: 500;
+    forced-color-adjust: black;
+    background-color: grey;
+}
+div{
+    background-color: black;
+    nav{
+  color: white;
+  display: inline;
+  border-right: 1px solid white;
+}
+}
+h1{
+    font-size: 50px;
+    color: blue;
+}
+section{
+    float:left;
+    width: 800px;
+}
+aside{
+    background-color: lightgrey;
+    float:right;
+    width: 600px;
+    height: 1000px;
+    h3{
+        font-size: 30px;
+        color:blue;
+        
+    }
+}
