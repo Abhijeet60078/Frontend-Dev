@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Transform</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .box {
+            width:100px;
+            height:100px;
+            background-color: lightblue;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .center {
+            transform-origin: center;
+            transform: rotate(30deg);
+        }
+        .bottom-right {
+            transform-origin: bottom right;
+            transform: rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <h2>Rotate Transform Example</h2>
+    <div class="wrapper">
+        <div class="box center">Center</div>
+        <div class="box bottom-right">Bottom Right</div>
+    </div>
+    <div class="box bottom-right">Bottom Right</div>
+    
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photo Gallery</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+  
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px; 
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+  
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px black;
+    }
+
+   
+    .item {
+      overflow: hidden;
+      background: white;
+      padding: 6px;
+      border-radius: 8px;
+    }
+
+    .caption {
+      font-size: 0.9rem;
+      padding-top: 6px;
+      text-align: center;
+      color: #555;
+    }
+
+    
+    @media (max-width: 1000px) {
+      .gallery { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 700px) {
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 420px) {
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple 4‑Column Photo Gallery</h1>
+
+  
+  <div class="gallery">
+    <div class="item">
+      <img src="https://picsum.photos/seed/1/800/600" alt="photo 1" loading="lazy">
+      <div class="caption">Photo 1</div>
+    </div>
+
+    <div class="item">
+      <img src="https://picsum.photos/seed/2/800/600" alt="photo 2" loading="lazy">
+      <div class="caption">Photo 2</div>
+    </div>
+
+    <div class="item">
+      <img src="https://picsum.photos/seed/3/800/600" alt="photo 3" loading="lazy">
+      <div class="caption">Photo 3</div>
+    </div>
+
+    <div class="item">
+      <img src="https://picsum.photos/seed/4/800/600" alt="photo 4" loading="lazy">
+      <div class="caption">Photo 4</div>
+    </div>
+
+    <div class="item">
+      <img src="https://picsum.photos/seed/5/800/600" alt="photo 5" loading="lazy">
+      <div class="caption">Photo 5</div>
+    </div>
+
+    <div class="item">
+      <img src="https://picsum.photos/seed/6/800/600" alt="photo 6" loading="lazy">
+      <div class="caption">Photo 6</div>
+    </div>
+
+    <div class="item">
+      <img src="https://picsum.photos/seed/7/800/600" alt="photo 7" loading="lazy">
+      <div class="caption">Photo 7</div>
+    </div>
+
+    <div class="item">
+      <img src="https://picsum.photos/seed/8/800/600" alt="photo 8" loading="lazy">
+      <div class="caption">Photo 8</div>
+    </div>
+  </div>
+
+</body>
+</html>
