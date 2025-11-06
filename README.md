@@ -1,1 +1,1 @@
-Frontend-Dev by  bridgelabz
+Frontend-Dev by  Bridgelabz Classes
