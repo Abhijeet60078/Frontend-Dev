@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shadow Effects</title>
+<style>
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+.card {
+  width: 200px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px gray;
+  transition: all .3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 10px 20px black;
+}
+h3 {
+  text-shadow: 1px 1px 2px gray;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="card"><h3>Card 1</h3><p>Light shadow</p></div>
+  <div class="card"><h3>Card 2</h3><p>Medium shadow</p></div>
+  <div class="card"><h3>Card 3</h3><p>Strong shadow</p></div>
+</div>
+</body>
+</html>

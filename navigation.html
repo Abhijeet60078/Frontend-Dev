@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Navigation Bar</title>
+<style>
+nav {
+  background: #222;
+  padding: 10px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+nav ul li a {
+  color: white;
+  padding: 10px 15px;
+  transition: all .3s ease;
+}
+nav ul li a:hover {
+  background: white;
+  color: black;
+}
+.active {
+  background: lightblue;
+  color: black !important;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: black;
+  color: white;
+  margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+  nav ul { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+</nav>
+
+<footer>Footer Section</footer>
+
+</body>
+</html>

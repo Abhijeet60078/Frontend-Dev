@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gradient Page</title>
+<style>
+body { margin: 0; font-family: Arial; }
+
+header, footer {
+  background: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
+header { top: 0; }
+footer { bottom: 0; }
+
+.section1 {
+  margin-top: 70px;
+  height: 50vh;
+  background: linear-gradient(to right, red, yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2 {
+  height: 50vh;
+  background: radial-gradient(circle, blue, purple);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+</head>
+
+<body>
+<header>Fixed Header</header>
+
+<div class="section1"><h2>Linear Gradient</h2></div>
+<div class="section2"><h2>Radial Gradient (Parallax)</h2></div>
+
+<footer>Fixed Footer</footer>
+</body>
+</html>

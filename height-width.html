@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Height & Width Demo</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.box1 { width: 200px; height: 150px; background: lightblue; }
+.box2 { width: 50%; height: 20vh; background: lightgreen; max-width: 300px; overflow: auto; }
+.box3 { width: 10em; min-height: 100px; background: pink; }
+</style>
+</head>
+
+<body>
+<div class="box1">px sizing</div>
+<div class="box2">%, vh, max-width</div>
+<div class="box3">em + min-height</div>
+</body>
+</html>
+

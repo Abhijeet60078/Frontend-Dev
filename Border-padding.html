@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Borders and Padding Demo</title>
+<style>
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.box {
+  padding: 20px;
+  width: 150px;
+  transition: border-color 0.4s ease;
+}
+.box:hover {
+  border-color: red;
+}
+.solid { border: 3px solid black; }
+.dashed { border: 3px dashed black; }
+.double { border: 4px double black; }
+.groove { border: 5px groove black; border-radius: 15px; }
+</style>
+</head>
+
+<body>
+<h2>Borders & Padding</h2>
+<div class="container">
+  <div class="box solid">Solid Border</div>
+  <div class="box dashed">Dashed Border</div>
+  <div class="box double">Double Border</div>
+  <div class="box groove">Groove + Radius</div>
+</div>
+</body>
+</html>

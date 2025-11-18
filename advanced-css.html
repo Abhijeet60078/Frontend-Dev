@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced CSS Selectors</title>
+<style>
+/* Attribute Selector */
+input[type="text"] { border: 2px solid blue; }
+a[href^="https"] { color: green; }
+
+/* Pseudo Class */
+li:hover { background: yellow; }
+input:focus { outline: 3px solid orange; }
+
+/* nth-child */
+li:nth-child(2) { color: red; }
+
+/* Pseudo elements */
+li::before { content: "★ "; color: gold; }
+li::after { content: " ✓"; color: green; }
+
+/* Combinators */
+ul > li { font-weight: bold; }
+h2 + p { color: purple; }
+p ~ span { background: lightblue; }
+div p { font-style: italic; }
+</style>
+</head>
+
+<body>
+<h2>Advanced Selectors</h2>
+<p>Paragraph after heading</p>
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<input type="text" placeholder="Text input">
+<br><br>
+<a href="https://google.com">Secure Link</a>
+<span>Sibling Example</span>
+</body>
+</html>
