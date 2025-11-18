@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pseudo-Classes Demo</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 30px; }
+.row { display:flex; gap:24px; align-items:flex-start; }
+.card { width:220px; padding:18px; border:1px solid #ccc; border-radius:8px; }
+.card h3 { margin:0 0 8px; font-size:16px; }
+a.example { display:inline-block; padding:8px 12px; text-decoration:none; color:#1a1a1a; border-radius:6px; }
+a.example:hover { background:#e6f7ff; color:#005b99; }
+button.example { padding:8px 12px; border-radius:6px; border:1px solid #888; background:#fff; cursor:pointer; }
+button.example:active { transform:translateY(2px); box-shadow:none; }
+button.example:focus { outline:3px solid #ffd54f; }
+ul.pseudo-list { padding-left:18px; margin:0; }
+ul.pseudo-list li:nth-child(odd) { background:#fafafa; }
+ul.pseudo-list li:nth-child(even) { background:#fff; }
+ul.pseudo-list li:hover { background:#ffefdb; }
+.info { font-size:13px; color:#444; margin-top:10px; }
+</style>
+</head>
+<body>
+<h1>Pseudo-Classes Examples</h1>
+<div class="row">
+  <div class="card">
+    <h3>:hover (Link)</h3>
+    <a href="#" class="example">Hover me</a>
+    <div class="info">:hover changes appearance when the user points at an element.</div>
+  </div>
+
+  <div class="card">
+    <h3>:focus (Button)</h3>
+    <button class="example">Tab to focus</button>
+    <div class="info">:focus styles an element when it receives keyboard focus.</div>
+  </div>
+
+  <div class="card">
+    <h3>:active (Button)</h3>
+    <button class="example">Click me</button>
+    <div class="info">:active applies while an element is being activated (pressed).</div>
+  </div>
+
+  <div class="card">
+    <h3>:nth-child()</h3>
+    <ul class="pseudo-list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <div class="info">:nth-child styles elements based on their index among siblings.</div>
+  </div>
+</div>
+</body>
+</html>

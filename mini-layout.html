@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mini UI</title>
+<style>
+* { box-sizing:border-box; }
+body { margin:0; font-family:Arial; display:flex; flex-direction:column; min-height:100vh; }
+header, footer { background:#0b3d91; color:#fff; text-align:center; padding:12px 16px; }
+main { flex:1; display:flex; align-items:center; justify-content:center; padding:24px; background:linear-gradient(180deg,#f7fbff,#eef6ff); }
+.card { width:100%; max-width:720px; background:#fff; border-radius:12px; padding:20px; box-shadow:0 18px 40px rgba(10,30,80,0.08); display:flex; gap:18px; flex-wrap:wrap; align-items:center; }
+.form { flex:1; min-width:260px; display:flex; flex-direction:column; gap:10px; }
+input, textarea, select { padding:10px; border-radius:8px; border:1px solid #ddd; }
+button { padding:10px 14px; border-radius:8px; background:#0b66f0; color:#fff; border:none; cursor:pointer; }
+img.small { width:120px; height:120px; object-fit:cover; border-radius:8px; box-shadow:0 8px 18px rgba(0,0,0,0.06); }
+input:focus, textarea:focus, select:focus, button:focus { outline:3px solid #cfe8ff; outline-offset:3px; }
+@media (max-width:700px) { .card { flex-direction:column; } img.small { margin:0 auto; } }
+</style>
+</head>
+<body>
+<header><strong>Mini UI Header</strong></header>
+<main>
+  <div class="card">
+    <div class="form">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea rows="4" placeholder="Message"></textarea>
+      <div style="display:flex; gap:8px;">
+        <select><option>Option 1</option><option>Option 2</option></select>
+        <button>Submit</button>
+      </div>
+    </div>
+    <img class="small" src="https://via.placeholder.com/300x300?text=Profile" alt="small image">
+  </div>
+</main>
+<footer>Footer — small site info</footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tooltip Demo</title>
+<style>
+body { font-family: Arial, sans-serif; height:100vh; margin:0; display:flex; align-items:center; justify-content:center; }
+.row { display:flex; gap:22px; }
+.tooltip { position:relative; display:inline-block; padding:12px 16px; border-radius:8px; background:#f4f4f4; cursor:default; }
+.tooltip .tip { position:absolute; bottom:110%; left:50%; transform:translateX(-50%); background:#222; color:#fff; padding:8px 10px; border-radius:6px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .3s ease-in-out, transform .3s ease-in-out; transform-origin:center bottom; }
+.tooltip:hover .tip { opacity:1; transform:translateX(-50%) translateY(-6px); }
+.tooltip .tip::after { content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%); border-width:6px; border-style:solid; border-color:#222 transparent transparent transparent; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="tooltip">Info
+    <div class="tip">This is an information tooltip.</div>
+  </div>
+  <div class="tooltip">Help
+    <div class="tip">Helpful hint appears here.</div>
+  </div>
+  <div class="tooltip">Icon
+    <div class="tip">Tooltip for an icon element.</div>
+  </div>
+</div>
+</body>
+</html>
