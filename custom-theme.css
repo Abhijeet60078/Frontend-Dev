@@ -1,0 +1,18 @@
+:root {
+    --bs-primary: #6a1b9a;
+    --bs-font-sans-serif: "Poppins", sans-serif;
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    transition: 0.3s ease;
+}
