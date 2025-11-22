@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+var jq1=jQuery.noConflict(true);
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var jq2=jQuery.noConflict(true);
+</script>
+</head>
+<body>
+
+<div id="slider">Carousel</div>
+<div id="modal">Modal Popup</div>
+<div id="widget">Widget</div>
+<div id="tooltip">Hover me</div>
+
+<script>
+jq1("#slider").css("background","lightblue");
+jq1("#widget").css("border","2px solid red");
+
+jq2("#modal").hide().fadeIn();
+jq2("#tooltip").hover(function(){
+jq2(this).attr("title","Tip Active");
+});
+</script>
+</body>
+</html>
