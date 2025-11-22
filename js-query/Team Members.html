@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="dept" id="d1">
+<h3 class="manager">Manager A</h3>
+<div class="emp">A1</div>
+<div class="emp">A2</div>
+</div>
+
+<div class="dept" id="d2">
+<h3 class="manager">Manager B</h3>
+<div class="emp">B1</div>
+<div class="emp">B2</div>
+</div>
+
+<script>
+$(".manager").click(function(){
+$(this).siblings(".emp").css("background","lightblue");
+});
+
+$(".emp").hover(function(){
+$(this).next().text("Contact: 12345");
+},function(){
+$(this).next().text("");
+});
+
+$(".dept").click(function(){
+$(this).children().css("background","lightgreen");
+});
+
+let r=Math.floor(Math.random()*$(".emp").length);
+$(".emp").eq(r).siblings().css("background","yellow");
+
+$(".dept").dblclick(function(){
+$(this).find(".emp").toggle();
+});
+</script>
+</body>
+</html>
