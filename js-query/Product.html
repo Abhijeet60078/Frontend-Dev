@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+.selected{border:2px solid red}
+[discount="true"]{background:lightyellow}
+</style>
+</head>
+<body>
+<div class="product" data-stock="in">Product 1 <span class="fav">♥</span></div>
+<div class="product" discount="true" data-stock="out">Product 2 <span class="fav">♥</span></div>
+<div class="product" data-stock="in">Product 3 <span class="fav">♥</span></div>
+
+<div id="details"></div>
+
+<script>
+$(".product").click(function(){
+if($(this).attr("data-stock")=="out") alert("Product Out of Stock");
+$(".product").css("background","");
+$(this).css("background","lightblue");
+});
+
+$(".product").hover(function(){
+$("#details").text("More details about "+$(this).text());
+},function(){
+$("#details").text("");
+});
+
+$(".fav").click(function(e){
+e.stopPropagation();
+$(this).toggleClass("selected");
+});
+</script>
+</body>
+</html>
