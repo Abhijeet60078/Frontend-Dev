@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h2 id="greet"></h2>
+<p id="welcome">Welcome to our website</p>
+<button id="change">Change Greeting</button>
+<button id="toggle">Toggle Welcome</button>
+
+<script>
+$(document).ready(function(){
+let h=new Date().getHours();
+if(h<12) $("#greet").text("Good Morning");
+else if(h<18) $("#greet").text("Good Afternoon");
+else $("#greet").text("Good Evening");
+
+$("#change").click(function(){
+$("#greet").text("Stay focused and keep learning!");
+});
+
+$("#toggle").click(function(){
+$("#welcome").toggle();
+});
+
+$("#greet").click(function(){
+alert("Greeting clicked");
+});
+});
+</script>
+</body>
+</html>
