@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="banner">Offer 1</div>
+<div class="banner">Offer 2</div>
+<div class="banner">Offer 3</div>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="slide">Slide</button>
+<button id="fadeToggle">Fade Toggle</button>
+
+<script>
+$(".banner").hide().first().show();
+let i=0;
+
+$("#hide").click(()=>$(".banner").hide());
+$("#show").click(()=>$(".banner").show());
+$("#slide").click(()=>$(".banner").slideToggle());
+$("#fadeToggle").click(()=>$(".banner").fadeToggle());
+
+setInterval(function(){
+$(".banner").fadeOut();
+i=(i+1)%$(".banner").length;
+$(".banner").eq(i).fadeIn();
+},5000);
+</script>
+</body>
+</html>
