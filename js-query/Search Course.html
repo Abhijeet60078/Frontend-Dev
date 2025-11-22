@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<input id="search" placeholder="Search">
+<p id="count"></p>
+<ul id="list">
+<li>Java</li>
+<li>Python</li>
+<li>JavaScript</li>
+<li>Data Science</li>
+</ul>
+
+<script>
+$("#search").keyup(function(){
+let val=$(this).val().toLowerCase();
+let c=0;
+
+$("#list li").each(function(){
+let t=$(this).text().toLowerCase();
+if(t.includes(val)){
+$(this).show();
+$(this).css("background","yellow");
+c++;
+}else{
+$(this).hide();
+}
+});
+$("#count").text("Matched: "+c);
+});
+</script>
+</body>
+</html>
