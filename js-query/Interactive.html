@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="faq">
+<h3 class="q">Question 1</h3>
+<p class="a">Answer 1</p>
+<input class="inp">
+</div>
+
+<div class="faq">
+<h3 class="q">Question 2</h3>
+<p class="a">Answer 2</p>
+<input class="inp">
+</div>
+
+<script>
+$(".a").hide();
+
+$(".q").click(function(){
+$(this).next().toggle();
+});
+
+$(".q").hover(function(){
+$(this).css("color","blue");
+},function(){
+$(this).css("color","black");
+});
+
+$(".q").dblclick(function(){
+$(".a").hide();
+});
+
+$(".inp").focus(function(){
+$(this).parent().css("background","lightyellow");
+});
+
+$(".inp").blur(function(){
+$(this).parent().css("background","white");
+});
+</script>
+</body>
+</html>
