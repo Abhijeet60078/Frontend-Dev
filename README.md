@@ -1,1 +1,1 @@
-frontend-Dev by  Bridgelabz 
+This repository contains the frontend development tasks, mini-projects, and assignments completed during the Bridgelabz training program. It covers HTML, CSS, JavaScript, responsive design, DOM manipulation, and real-world UI building by bridgelabz
